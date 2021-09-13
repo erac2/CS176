@@ -1,0 +1,50 @@
+/* * ConsonantsVowels2.java
+		 * @author s1239605
+		 *
+		 */
+
+	import java.util.Scanner;
+	public class ConsonantsVowels2 {
+
+		void test()
+		{
+			Scanner in = new Scanner(System.in);
+	        System.out.println("Enter a word:");
+	        String str = in.nextLine();
+	        str = str.toLowerCase();
+	        
+	        // Count consonants & vowels
+	        int cCount = 0;
+	        int vCount = 0;
+	        for (int i = 0; i < str.length(); i++)
+	        {
+	            // take current character of str at index i
+	            String current = str.substring(i, i+1);
+	            
+	            // update cCount or vCount
+	            if (current.equals("a") || current.equals("e") || current.equals("i") ||
+	                current.equals("o") || current.equals("u") )
+	            {
+	                vCount = vCount + 1;
+	            }
+	            else if
+	            {
+	            	
+	            }
+	            else
+	            {
+	                cCount = cCount + 1;
+	            }
+	        } // end for
+	        
+	        System.out.println("Number of vowels: " + vCount);
+	        System.out.println("Number of consonants: " + cCount);        
+	        
+	    }
+	    
+	    public static void main(String[] args)
+	    {
+	        ConsonantsVowels2 obj = new ConsonantsVowels2();
+	        obj.test();
+	    }
+	}
