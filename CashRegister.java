@@ -34,7 +34,7 @@ public class CashRegister {
 	 * the change due to the customer
 	 */
 	
-	public double givechange()
+	public double giveChange()
 	{
 		double change = purchase - payment;
 		purchase = 0;
