@@ -28,7 +28,7 @@ public class CashRegisterTester {
 		payment = in.nextDouble();
 		CashRegister.receivePayment(payment);
 		
-		System.out.println("Your change: " + -CashRegister.givechange());
+		System.out.printf("Your change: %.2f", -CashRegister.giveChange());
 	}
 
 }
