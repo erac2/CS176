@@ -1,53 +1,103 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-public class ClassSearch {
-	
-	public static void SearchColor(ArrayList<String>coloring,String search)
-	{
-		int i=coloring.size();
-		if (search.equals("violet")||search.equals("green")||search.equals("yellow")||search.equals("teal"))
-		{
-			System.out.println("The color " + search + " was found after " + i + " searches.");
-	}
+public class ColorSearch {
 
+	/**public static void SearchColor(ArrayList<String>coloring,String search)
+	{
+		int count = 0;
+		boolean YesorNo = false;
+		
+		for(String searchColor : coloring)
+		{
+		if(searchColor.equals(search))
+		{
+			YesorNo = true;
+			count++;
+		}
+		else
+		{
+			count++;
+		}
+		
+		}
+		
+		if (YesorNo = true)
+		{
+		System.out.println("The color " + search + " was found after " + count + " searches");
+		}
+		else
+		{
+		System.out.println("The color " + search + " was not found after " + count + " searches");
+		}
+	}**/
+
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner in = new Scanner(System.in);
 
 		ArrayList<String>colors = new ArrayList<String>();
-		boolean YorN = true;
+		boolean YorN;
+		
 		while(YorN = true)
 		{
-		System.out.println("Enter a color name, or 'Q' to quit: ?");
-		String color = in.next();
-		colors.add(color);
-		if (color.equals("Q"))
-		{
-			YorN = false;
-			break;
+			System.out.println("Enter a color name, or 'Q' to quit: ?");
+			String color = in.next();
+			colors.add(color);
+			if (color.equals("Q"))
+			{
+				YorN = false;
+				break;
+			}
 		}
-	
+
+		boolean TorF = true;
 		
-		int i = 0;
-		while (i<colors.size())
+		while (TorF = true)
 		{
 			System.out.println("Enter a color to search for, or 'Q' to quit: ?");
 			String search = in.next();
 			SearchColor(colors, search);
-			
-			if (search.equals("violet")||search.equals("green")||search.equals("yellow")||search.equals("teal"))
+
+			if(search.equals("Q"))
 			{
-				System.out.println("The color " + search + " was found after " + i + " searches.");
-			}
-			if(search.equals('Q'))
-			{
+				TorF = false;
 				break;
 			}
-			
-			i++;
 		}
+	}
+	
+
+		
+		public static void SearchColor(ArrayList<String>coloring,String search)
+		{
+			int count = 0;
+			boolean YesorNo = false;
+			
+			for(String searchColor : coloring)
+			{
+			if(searchColor.equals(search))
+			{
+				YesorNo = true;
+				count++;
+				break;
+			}
+			else
+			{
+				count++;
+			}
+			
+			}
+			
+			if (YesorNo == true)
+			{
+			System.out.println("The color " + search + " was found after " + count + " searches");
+			}
+			else
+			{
+			System.out.println("The color " + search + " was not found after " + count + " searches");
+			}
 		}
 		
 	}
 
-}
