@@ -1,0 +1,52 @@
+package arrayList;
+
+public class ComboLock 
+{
+	private int ticks;
+	private int current;
+	private int code1;
+	private int code2;
+	private int code3;
+	private int turn;
+	private int status;
+	
+	public ComboLock(int code1, int code2, int code3)
+	{
+		this.code1 = code1;
+		this.code2 = code2;
+		this.code3 = code3;
+		ticks = 0;
+		turn = 0;
+		status = 0;
+	}
+	
+	public void reset()
+	{
+		current = 0;
+	}
+	
+	public void leftTurn(int ticks)
+	{
+		turn = turn + 1;
+		current = (current - ticks) %40;
+	}
+	
+	public void rightTurn(int ticks)
+	{
+		turn = turn + 1;
+		current = (current + ticks) %40;
+	}
+	
+	public boolean open()
+	{
+		if (current == code1 && current == code2 && current == code3)
+		{
+		return true;
+		}
+		else
+		{
+		return false;
+		} 
+	}
+
+}
