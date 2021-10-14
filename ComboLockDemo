@@ -1,0 +1,67 @@
+package arrayList;
+import java.util.Scanner;
+
+public class ComboLockDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner (System.in);
+		
+		
+		ComboLock DemoGame = new ComboLock(10, 20, 30);
+		
+		int i = 1;
+		int store1;
+		for (i = 1; i < 3; i++)
+		if (i == 1)
+		{
+			System.out.println("Enter number of ticks to turn to the right 0 - 39. Enter an invalid number to quit. ");
+			int value = in.nextInt();
+			if (value < 0 || value > 39)
+			{
+			
+			}
+			else
+			{
+				DemoGame.rightTurn(value);
+			}
+			
+			
+		}
+
+		if (i == 2)
+		{
+			System.out.println("Enter number of ticks to turn to the right 0 - 39. Enter an invalid number to quit. ");
+			int value = in.nextInt();
+			if (value < 0 || value > 39)
+			{
+			
+			}
+			else
+			{
+				DemoGame.leftTurn(value);
+			}
+			
+	
+			if (i == 3)
+			{
+				System.out.println("Enter number of ticks to turn to the right 0 - 39. Enter an invalid number to quit. ");
+				value = in.nextInt();
+				if (value < 0 || value > 39)
+				{
+				
+				}
+				else
+				{
+					DemoGame.rightTurn(value);
+				}
+	
+			}
+			
+			if (turn ==2)
+			{
+
+
+}
+}
+}
