@@ -1,13 +1,13 @@
 /**
-   A bank account has a balance and a mechanism for
-   applying interest or fees at the end of the month.
+   A bank account has a balance that can be changed by
+   deposits and withdrawals.
 */
-public class BankAccount
+public class BankAccount implements Measurable
 {
    private double balance;
 
    /**
-      Constructs a bank account with zero balance.
+      Constructs a bank account with a zero balance.
    */
    public BankAccount()
    {
@@ -15,8 +15,17 @@ public class BankAccount
    }
 
    /**
-      Makes a deposit into this account.
-      @param amount the amount of the deposit
+      Constructs a bank account with a given balance.
+      @param initialBalance the initial balance
+   */
+   public BankAccount(double initialBalance)
+   {
+      balance = initialBalance;
+   }
+
+   /**
+      Deposits money into the bank account.
+      @param amount the amount to deposit
    */
    public void deposit(double amount)
    {
@@ -24,9 +33,8 @@ public class BankAccount
    }
 
    /**
-      Makes a withdrawal from this account, or charges a penalty if
-      sufficient funds are not available.
-      @param amount the amount of the withdrawal
+      Withdraws money from the bank account.
+      @param amount the amount to withdraw
    */
    public void withdraw(double amount)
    {
@@ -34,19 +42,26 @@ public class BankAccount
    }
 
    /**
-      Carries out the end of month processing that is appropriate
-      for this account.
-   */
-   public void monthEnd()
-   {
-   }
-
-   /**
-      Gets the current balance of this bank account.
+      Gets the current balance of the bank account.
       @return the current balance
    */
    public double getBalance()
    {
       return balance;
    }
+
+   /**
+      Adds interest to the bank account.
+      @param rate The percentage rate of interest gained.
+   */
+   public void addInterest(double rate)
+   {
+      balance = balance + balance * rate / 100;
+   }
+
+@Override
+public double getMeasure() 
+{
+	return balance;
+}
 }
