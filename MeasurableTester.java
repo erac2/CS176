@@ -1,6 +1,13 @@
 /**
    This program demonstrates the measurable Country class.
 */
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.util.Scanner;
+
+
 public class MeasurableTester
 {
    public static void main(String[] args)
@@ -53,5 +60,7 @@ public class MeasurableTester
       System.out.println("Expected: 95");
       System.out.println("");
 
+      System.out.println("");
+      
    }
 }
