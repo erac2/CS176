@@ -36,6 +36,7 @@ public class Data
 		}
 		//Measurable max = objects[0];
 		double max = 0;
+		max = objects[0].getMeasure();
 		for (Measurable obj : objects)
 		{
 			if (obj.getMeasure() > max)
@@ -58,8 +59,9 @@ public class Data
 		{
 			return 0;
 		}
-		//Measurable max = objects[0];
+	//	Measurable min = objects[0];
 		double min = 0;
+		min = objects[0].getMeasure();
 		for (Measurable obj : objects)
 		{
 			if (obj.getMeasure()< min)

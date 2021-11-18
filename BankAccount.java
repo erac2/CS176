@@ -1,16 +1,16 @@
 /**
-   A bank account has a balance that can be changed by
+   A bank account has a balance that can be changed by 
    deposits and withdrawals.
 */
 public class BankAccount implements Measurable
 {
    private double balance;
-
+  
    /**
       Constructs a bank account with a zero balance.
    */
    public BankAccount()
-   {
+   {   
       balance = 0;
    }
 
@@ -19,7 +19,7 @@ public class BankAccount implements Measurable
       @param initialBalance the initial balance
    */
    public BankAccount(double initialBalance)
-   {
+   {   
       balance = initialBalance;
    }
 
@@ -28,8 +28,9 @@ public class BankAccount implements Measurable
       @param amount the amount to deposit
    */
    public void deposit(double amount)
-   {
-      balance = balance + amount;
+   {  
+      double newBalance = balance + amount;
+      balance = newBalance;
    }
 
    /**
@@ -37,8 +38,9 @@ public class BankAccount implements Measurable
       @param amount the amount to withdraw
    */
    public void withdraw(double amount)
-   {
-      balance = balance - amount;
+   {   
+      double newBalance = balance - amount;
+      balance = newBalance;
    }
 
    /**
@@ -46,22 +48,12 @@ public class BankAccount implements Measurable
       @return the current balance
    */
    public double getBalance()
-   {
+   {   
       return balance;
    }
-
-   /**
-      Adds interest to the bank account.
-      @param rate The percentage rate of interest gained.
-   */
-   public void addInterest(double rate)
+   
+   public double getMeasure() 
    {
-      balance = balance + balance * rate / 100;
+   	return balance;
    }
-
-@Override
-public double getMeasure() 
-{
-	return balance;
-}
 }
